@@ -11,9 +11,13 @@ isPorn(psl.get(extractHostname(url)), (err, status) => {
     console.log("this is an unworthy link for our site");
   } else {
     // if returns false, then search extractedHostname for keywords
-    console.log("this is a worthy link for our site");
+    console.log("this is not a porn site");
     if (psl.get(extractHostname(url)).includes("satan")) {
-      console.log("this is an unworthy, blasphemous link for our site");
+      console.log(
+        "contains banned keyword. this is an unworthy link for our site"
+      );
     }
   }
 });
+
+
