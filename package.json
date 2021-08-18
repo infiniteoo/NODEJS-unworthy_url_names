@@ -1,0 +1,27 @@
+{
+  "name": "unworthy_url_names",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infiniteoo/NODEJS-unworthy_url_names.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/infiniteoo/NODEJS-unworthy_url_names/issues"
+  },
+  "homepage": "https://github.com/infiniteoo/NODEJS-unworthy_url_names#readme",
+  "dependencies": {
+    "is-porn": "^0.9.0",
+    "psl": "^1.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
