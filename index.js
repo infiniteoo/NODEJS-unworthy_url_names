@@ -3,8 +3,8 @@ const psl = require("psl");
 const extractHostname = require("./extractHostname");
 
 let url = "https://www.pornhub.com/view_video.php?viewkey=ph5b576748add25";
-let stripped = psl.get(extractHostname(url));
-isPorn(stripped, (err, status) => console.log(status));
+
+isPorn(psl.get(extractHostname(url)), (err, status) => console.log(status));
 
 /* example use for is-porn
 
