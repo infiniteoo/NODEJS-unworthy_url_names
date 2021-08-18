@@ -2,29 +2,18 @@ const isPorn = require("is-porn");
 const psl = require("psl");
 const extractHostname = require("./extractHostname");
 
-let url = "https://www.pornhub.com/view_video.php?viewkey=ph5b576748add25";
+// let url = "https://www.pornhub.com/view_video.php?viewkey=ph5b576748add25";
+let url = "https://www.churchofsatan.com/";
+// isPorn(psl.get(extractHostname(url)), (err, status) => console.log(status));
 
-isPorn(psl.get(extractHostname(url)), (err, status) => console.log(status));
-
-/* example use for is-porn
-
-isPorn("adult-site.com", function (error, status) {
-  console.log("adult-site.com :", status);
-}); */
-
-/* let url = "http://www.youtube.com/watch?v=ClkQA2Lb_iE";
-console.log(psl.get(extractHostname(url))); // returns youtube.com */
-
-// test the code
-/* console.log("== Testing extractHostname: ==");
-console.log(extractHostname("http://www.blog.classroom.me.uk/index.php"));
-console.log(extractHostname("http://www.youtube.com/watch?v=ClkQA2Lb_iE"));
-console.log(extractHostname("https://www.youtube.com/watch?v=ClkQA2Lb_iE"));
-console.log(extractHostname("www.youtube.com/watch?v=ClkQA2Lb_iE"));
-console.log(extractHostname("ftps://ftp.websitename.com/dir/file.txt"));
-console.log(extractHostname("websitename.com:1234/dir/file.txt"));
-console.log(extractHostname("ftps://websitename.com:1234/dir/file.txt"));
-console.log(extractHostname("example.com?param=value"));
-console.log(extractHostname("https://facebook.github.io/jest/"));
-console.log(extractHostname("//youtube.com/watch?v=ClkQA2Lb_iE"));
-console.log(extractHostname("http://localhost:4200/watch?v=ClkQA2Lb_iE")); */
+isPorn(psl.get(extractHostname(url)), (err, status) => {
+  if (status) {
+    console.log("this is an unworthy link for our site");
+  } else {
+    // if returns false, then search extractedHostname for keywords
+    console.log("this is a worthy link for our site");
+    if (psl.get(extractHostname(url)).includes("satan")) {
+      console.log("this is an unworthy, blasphemous link for our site");
+    }
+  }
+});
